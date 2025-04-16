@@ -1,7 +1,7 @@
 const sumAll = function(firstNum,secondNum) {
     let finalSum = 0;
-    for (i = 0; i < secondNum - 1; i++) {
-        finalSum += firstNum + i;
+    for (i = firstNum; i <= secondNum; i++) {
+        finalSum += i;
     }
 
     return finalSum;
