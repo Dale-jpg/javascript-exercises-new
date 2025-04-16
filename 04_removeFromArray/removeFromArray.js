@@ -1,12 +1,5 @@
-const removeFromArray = function(array,eliminate) {
-    let index = array.indexOf(eliminate);
-
-    if (index > -1) {
-        array.splice(index,1);
-    }
-
-    return array;
-};
-
+const removeFromArray = function(array, ...args) {
+      return array.filter(val => !args.includes(val))
+}
 // Do not edit below this line
 module.exports = removeFromArray;
