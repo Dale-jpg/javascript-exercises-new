@@ -1,39 +1,19 @@
-str = "A car, a man, a maraca."
 
 const palindromes = function (str) {
-    let length = str.length;
-    console.log(length);
-};
-
-// str = "A car, a man, a maraca."
-function palindromes (str) {
     let cleanedText = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
     let arrayStr = cleanedText.split('');
-    console.table(arrayStr);
-    let length = arrayStr.length;
-    let halfWayPoint = Math.ceil(length / 2);
-    let firstHalf = arrayStr.slice(0,halfWayPoint);
-    console.log(firstHalf);
-    let secondHalf = arrayStr.slice(halfWayPoint)
-    let secondHalfReverse = secondHalf.reverse();
-    console.log(secondHalfReverse);
-    let secondHalfStr = secondHalfReverse.join('');
-    let firstHalfStr = firstHalf.join('');
-    console.log(secondHalfStr);
-    console.log(firstHalfStr);
+    let cleanedTextForward = arrayStr.join();
+    let cleanedTextReverse = arrayStr.reverse().join();
 
     
-    if (firstHalfStr == secondHalfStr) {
+    if (cleanedTextForward === cleanedTextReverse) {
         return true;
     } else {
         return false;
     }
-}
+};
 
-palindromes("A car, a man, a maraca.");
-// palindromes("Rats live on no evil star.");
-
-// palindromes("A car, a man, a maraca.");
+// *** Initial pseudocode ***
 // a palindrome is a string spelled the same both forwards or backwards
 // usually without considering punctuation or word breaks
 // 1. How long is the string
@@ -44,6 +24,14 @@ palindromes("A car, a man, a maraca.");
 // 6. If first half is equal to the second half after the reverse, return true
 // 7. Otherwise, return false
 // 8. Probably have to figure out how to remove spaces and punctuation from the string
+
+// *** Final pseudocode ***
+// 1. Clean the string of punctuation and word breaks
+// 2. Split the string into an array so the letters are separate
+// 3. Have one string with it normal and the other string with it reversed
+// 4. Its funny to think I was caught up on splitting it and comparing when 
+// all that had to be done was reverse the whole string. "A palindrome is a 
+// string that is spelled the same both forwards and backwards"
 
 
 // Do not edit below this line
