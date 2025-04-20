@@ -1,13 +1,14 @@
 const fibonacci = function(num) {
     let arr = [0,1]
     if (num < 0) {
-        console.error("OOPS");
+        return "OOPS";
     } else {
-    for (i=2;i <26;i++) {
-        let sum = arr[i-2] + arr[i-1];
-        arr.push(sum);
-    }
-    return arr[num];
+        num = Number(num);
+        for (i=2;i <26;i++) {
+            let sum = arr[i-2] + arr[i-1];
+            arr.push(sum);
+        }
+        return arr[num];
     }
 };
 
