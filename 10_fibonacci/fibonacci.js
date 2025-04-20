@@ -4,7 +4,7 @@ const fibonacci = function(num) {
         return "OOPS";
     } else {
         num = Number(num);
-        for (i=2;i <26;i++) {
+        for (i=2;i <= num;i++) {
             let sum = arr[i-2] + arr[i-1];
             arr.push(sum);
         }
