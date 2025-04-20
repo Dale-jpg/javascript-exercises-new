@@ -1,5 +1,7 @@
 const getAge = function getAge(death,birth) {
-    
+    if (!death) {
+        death = new Date().getFullYear(); 
+    }
     return death - birth
 };
 
